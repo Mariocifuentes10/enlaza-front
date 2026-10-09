@@ -1,0 +1,44 @@
+.barra {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-normal);
+}
+
+.alta {
+  color: var(--color-primary-500);
+}
+
+.media {
+  color: var(--color-warning);
+}
+
+.baja {
+  color: var(--color-text-muted);
+}
+
+.pista {
+  flex: 1 1 8rem;
+  min-width: 8rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-neutral-300);
+  overflow: hidden;
+}
+
+.relleno {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+}

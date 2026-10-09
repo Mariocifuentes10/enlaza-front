@@ -1,0 +1,68 @@
+.sitioWeb {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-500);
+}
+
+.promedio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.estrellas {
+  color: var(--color-warning);
+  letter-spacing: 0.05em;
+}
+
+.resena {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resena:last-of-type {
+  border-bottom: none;
+}
+
+.resenaCabeza {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-1);
+}
+
+.resenaAutor {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.resenaFecha {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.resenaComentario {
+  font-size: var(--font-size-sm);
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.formularioResena {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px dashed var(--color-border);
+}
+
+.formularioTitulo {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.accionesResena {
+  margin-top: var(--space-3);
+}

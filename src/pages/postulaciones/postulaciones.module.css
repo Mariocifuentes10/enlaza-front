@@ -1,0 +1,382 @@
+.pagina {
+  max-width: 56rem;
+}
+
+.titulo {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-1);
+}
+
+.tituloSeccion {
+  font-size: var(--font-size-xl);
+}
+
+.subtitulo {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-muted);
+  margin-bottom: var(--space-6);
+}
+
+.filtro {
+  flex: 1 1 14rem;
+  min-width: 14rem;
+  margin-bottom: 0;
+}
+
+.resultados {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.tarjeta {
+  display: block;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  margin-bottom: var(--space-3);
+}
+
+.tituloEnlace {
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.tituloEnlace:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.empresaEnlace {
+  color: var(--color-primary-500);
+  text-decoration: none;
+}
+
+.empresaEnlace:hover {
+  text-decoration: underline;
+}
+
+.empresaEnlace:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.filaEncabezado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.filaMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: var(--space-1) 0 var(--space-3);
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+}
+
+.filaPie {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-neutral-0);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.chip {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: var(--color-neutral-100);
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+}
+
+.chipAjuste {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-50);
+  border: 1px solid var(--color-accent-200);
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-600);
+}
+
+.chipDiscapacidad {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: var(--color-info-solid);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-on-info);
+}
+
+.puntaje {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success);
+}
+
+.enlaceCv {
+  display: inline-block;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-500);
+}
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.paginacionInfo {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.vacio {
+  padding: var(--space-8);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.vacioEnlace {
+  display: block;
+  margin-top: var(--space-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-500);
+}
+
+.cargando {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  padding: var(--space-6) 0;
+}
+
+/* ---- Contadores por estado (empresa) ---- */
+
+.contadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.contador {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.contador:hover {
+  border-color: var(--color-primary-300);
+  background-color: var(--color-neutral-50);
+}
+
+.contador:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.contadorActivo {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-primary-50);
+}
+
+.contadorCantidad {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.punto {
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: var(--radius-full);
+}
+
+.puntoInfo {
+  background-color: var(--color-info);
+}
+
+.puntoAviso {
+  background-color: var(--color-warning);
+}
+
+.puntoPrimario {
+  background-color: var(--color-primary-500);
+}
+
+.puntoError {
+  background-color: var(--color-error);
+}
+
+.puntoExito {
+  background-color: var(--color-success);
+}
+
+/* ---- Agrupación por vacante (empresa) ---- */
+
+.grupo {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+}
+
+.grupoEncabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grupoTitulo {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.grupoMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.grupoCuerpo {
+  padding: var(--space-4);
+}
+
+/* ---- Postulante ---- */
+
+.postulante {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.postulante:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.postulante:first-child {
+  padding-top: 0;
+}
+
+.postulanteResumen {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--font-line-height-normal);
+  margin: var(--space-2) 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.postulanteNombre {
+  font-weight: var(--font-weight-semibold);
+}
+
+.filaSelector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.selector {
+  min-width: 11rem;
+  max-width: 14rem;
+}
+
+.selectorNota {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.mensajeFila {
+  margin-top: var(--space-2);
+}
