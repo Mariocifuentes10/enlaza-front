@@ -18,6 +18,46 @@ interface EstadoLocation {
   mensaje?: string;
 }
 
+function IconoOjo() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+}
+
+function IconoOjoCerrado() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+      <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c6.5 0 10 7 10 7a17.4 17.4 0 0 1-1.67 2.68" />
+      <path d="M6.61 6.61A17.4 17.4 0 0 0 2 12s3.5 7 10 7a10.43 10.43 0 0 0 5.39-1.39" />
+      <line x1="2" y1="2" x2="22" y2="22" />
+    </svg>
+  );
+}
+
 export function LoginPage() {
   const { estado, usuario, ingresar } = useAuth();
   const location = useLocation();
@@ -77,7 +117,25 @@ export function LoginPage() {
         />
       </Field>
 
-      <Field id="contrasena" label="Contraseña" error={errors.contrasena?.message} requerido>
+      <Field
+        id="contrasena"
+        label="Contraseña"
+        error={errors.contrasena?.message}
+        requerido
+        accion={
+          <button
+            type="button"
+            className={estilos.toggle}
+            aria-pressed={verContrasena}
+            aria-controls="contrasena"
+            aria-label={verContrasena ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            title={verContrasena ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            onClick={() => setVerContrasena((valor) => !valor)}
+          >
+            {verContrasena ? <IconoOjoCerrado /> : <IconoOjo />}
+          </button>
+        }
+      >
         <TextInput
           {...register('contrasena')}
           type={verContrasena ? 'text' : 'password'}
@@ -85,27 +143,19 @@ export function LoginPage() {
         />
       </Field>
 
-      <button
-        type="button"
-        className={estilos.toggle}
-        aria-pressed={verContrasena}
-        aria-controls="contrasena"
-        onClick={() => setVerContrasena((valor) => !valor)}
-      >
-        {verContrasena ? 'Ocultar contraseña' : 'Mostrar contraseña'}
-      </button>
+      <Link className={estilos.olvide} to={paths.olvidePassword}>
+        ¿Olvidaste tu contraseña?
+      </Link>
 
-      <div className={estilos.acciones}>
-        <Boton type="submit" cargando={isSubmitting}>
-          Entrar
-        </Boton>
-        <Link className={estilos.enlace} to={paths.olvidePassword}>
-          ¿Olvidaste tu contraseña?
-        </Link>
-        <Link className={estilos.enlace} to={paths.registro}>
-          ¿No tienes cuenta? Crear cuenta
-        </Link>
-      </div>
+      <Boton type="submit" cargando={isSubmitting} className={estilos.botonPrincipal}>
+        Entrar
+      </Boton>
+
+      <p className={estilos.separador}>¿No tienes cuenta?</p>
+
+      <Link className={estilos.botonSecundario} to={paths.registro}>
+        Crear cuenta
+      </Link>
     </form>
   );
 }

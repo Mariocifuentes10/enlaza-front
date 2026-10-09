@@ -1,0 +1,133 @@
+.contenedor {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--color-surface-muted);
+}
+
+.marca {
+  display: none;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+
+.logoMovil {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-500);
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 26rem;
+  padding: var(--space-8);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 900px) {
+  .contenedor {
+    grid-template-columns: 1.05fr 1fr;
+  }
+
+  .marca {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-10);
+    padding: var(--space-12);
+    color: var(--color-on-primary);
+    background: linear-gradient(
+      160deg,
+      var(--color-primary-700) 0%,
+      var(--color-primary-500) 60%,
+      var(--color-primary-400) 100%
+    );
+    overflow: hidden;
+  }
+
+  .marca::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 12%, rgba(255, 255, 255, 0.22), transparent 45%);
+    pointer-events: none;
+  }
+
+  .logo {
+    position: relative;
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-on-primary);
+  }
+
+  .mensajeMarca {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 34rem;
+  }
+
+  .marcaTitulo {
+    font-size: var(--font-size-4xl);
+    line-height: var(--font-line-height-tight);
+  }
+
+  .marcaTexto {
+    font-size: var(--font-size-lg);
+    line-height: var(--font-line-height-relaxed);
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .listaMarca {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+
+  .listaMarca li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .listaMarca li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-full);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .logoMovil {
+    display: none;
+  }
+
+  .tarjeta {
+    padding: var(--space-10);
+    box-shadow: var(--shadow-lg);
+  }
+}

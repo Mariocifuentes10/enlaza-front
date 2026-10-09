@@ -1,18 +1,19 @@
-import { Placeholder } from '@/components/ui/Placeholder';
+import { Link } from 'react-router-dom';
+import { paths } from '@/routes/paths';
+import { PaginaError } from './PaginaError';
+import estilos from './errores.module.css';
 
 export function NotFoundPage() {
   return (
-    <main
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 'var(--space-2)',
-      }}
-    >
-      <Placeholder titulo="404" descripcion="La página que buscas no existe." />
-    </main>
+    <PaginaError
+      codigo="404"
+      titulo="Página no encontrada"
+      descripcion="La página que buscas no existe o fue movida a otra dirección."
+      acciones={
+        <Link to={paths.home} className={estilos.boton}>
+          Volver al inicio
+        </Link>
+      }
+    />
   );
 }

@@ -1,18 +1,19 @@
-import { Placeholder } from '@/components/ui/Placeholder';
+import { Link } from 'react-router-dom';
+import { paths } from '@/routes/paths';
+import { PaginaError } from './PaginaError';
+import estilos from './errores.module.css';
 
 export function UnauthorizedPage() {
   return (
-    <main
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 'var(--space-2)',
-      }}
-    >
-      <Placeholder titulo="403" descripcion="No tienes permisos para acceder a esta sección." />
-    </main>
+    <PaginaError
+      codigo="403"
+      titulo="Acceso denegado"
+      descripcion="No tienes permisos para ver esta sección con tu rol actual."
+      acciones={
+        <Link to={paths.home} className={estilos.boton}>
+          Ir a mi panel
+        </Link>
+      }
+    />
   );
 }

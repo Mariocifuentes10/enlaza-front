@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import { paths } from '@/routes/paths';
+import estilos from './auth.module.css';
 
 export function OlvidePasswordPage() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-      <h1 style={{ fontSize: 'var(--font-size-2xl)' }}>Recuperar contraseña</h1>
-      <p style={{ color: 'var(--color-text-muted)', fontSize: 'var(--font-size-sm)' }}>
-        Flujo de recuperación placeholder — Sprint 1.
+    <div>
+      <h1 className={estilos.titulo}>Recuperar contraseña</h1>
+      <p className={estilos.subtitulo}>
+        Para restablecer tu contraseña, contacta al equipo de soporte de Enlaza.
       </p>
-      <Link to={paths.login} style={{ fontSize: 'var(--font-size-sm)' }}>
+      <Link className={estilos.enlace} to={paths.login}>
         Volver a iniciar sesión
       </Link>
     </div>

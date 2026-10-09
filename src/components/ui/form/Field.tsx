@@ -7,10 +7,11 @@ interface FieldProps {
   error?: string;
   pista?: ReactNode;
   requerido?: boolean;
+  accion?: ReactNode;
   children: ReactNode;
 }
 
-export function Field({ id, label, error, pista, requerido, children }: FieldProps) {
+export function Field({ id, label, error, pista, requerido, accion, children }: FieldProps) {
   const ids = [error ? `${id}-error` : null, pista ? `${id}-pista` : null]
     .filter(Boolean)
     .join(' ');
@@ -34,7 +35,14 @@ export function Field({ id, label, error, pista, requerido, children }: FieldPro
           </span>
         )}
       </label>
-      {control}
+      {accion ? (
+        <div className={estilos.controlConAccion}>
+          {control}
+          <div className={estilos.accion}>{accion}</div>
+        </div>
+      ) : (
+        control
+      )}
       {pista && (
         <span className={estilos.pista} id={`${id}-pista`}>
           {pista}

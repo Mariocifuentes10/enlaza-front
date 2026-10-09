@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { AuthLayout } from '@/layouts/AuthLayout';
 import { AppLayout } from '@/layouts/AppLayout';
 import { ProtectedRoute } from './ProtectedRoute';
+import { RootRedirect } from './RootRedirect';
 import { paths } from './paths';
 
 function pag<Modulo extends Record<string, unknown>>(
@@ -12,7 +13,6 @@ function pag<Modulo extends Record<string, unknown>>(
   return lazy(() => cargador().then((modulo) => ({ default: modulo[nombre] as ComponentType })));
 }
 
-const LandingPage = pag(() => import('@/pages/public/LandingPage'), 'LandingPage');
 const LoginPage = pag(() => import('@/pages/auth/LoginPage'), 'LoginPage');
 const RegistroPage = pag(() => import('@/pages/auth/RegistroPage'), 'RegistroPage');
 const OlvidePasswordPage = pag(
@@ -65,7 +65,7 @@ const UnauthorizedPage = pag(() => import('@/pages/errors/UnauthorizedPage'), 'U
 const NotFoundPage = pag(() => import('@/pages/errors/NotFoundPage'), 'NotFoundPage');
 
 export const router = createBrowserRouter([
-  { path: paths.home, Component: LandingPage },
+  { path: paths.home, Component: RootRedirect },
   {
     element: <AuthLayout />,
     children: [

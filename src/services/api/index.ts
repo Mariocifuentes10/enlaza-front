@@ -14,3 +14,4 @@ export { chatbotApi } from './chatbotApi';
 export { selloApi } from './selloApi';
 export { resenasApi } from './resenasApi';
 export { mentoresApi } from './mentoresApi';
+export { adminApi } from './adminApi';

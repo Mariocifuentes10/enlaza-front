@@ -1,0 +1,94 @@
+.contenedor {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+  background-color: var(--color-surface-muted);
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 32rem;
+  padding: var(--space-10) var(--space-8);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.codigo {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.titulo {
+  font-size: var(--font-size-2xl);
+}
+
+.descripcion {
+  color: var(--color-text-muted);
+  line-height: var(--font-line-height-relaxed);
+  max-width: 28rem;
+}
+
+.detalle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background-color: var(--color-neutral-50);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-primary-500);
+  color: var(--color-on-primary);
+  transition: background-color 0.15s ease;
+}
+
+.boton:hover {
+  background-color: var(--color-primary-600);
+  color: var(--color-on-primary);
+}
+
+.botonSecundario {
+  background-color: transparent;
+  color: var(--color-primary-600);
+  border: 1px solid var(--color-border-strong);
+}
+
+.botonSecundario:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+}

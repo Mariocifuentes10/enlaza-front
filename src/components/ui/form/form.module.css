@@ -51,6 +51,23 @@
   cursor: not-allowed;
 }
 
+.controlConAccion {
+  position: relative;
+}
+
+.controlConAccion input {
+  padding-right: 3rem;
+}
+
+.accion {
+  position: absolute;
+  top: 50%;
+  right: var(--space-3);
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
 .area {
   min-height: 8rem;
   resize: vertical;

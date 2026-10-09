@@ -150,7 +150,7 @@ export function RegistroPage() {
       </Field>
 
       <div className={estilos.acciones}>
-        <Boton type="submit" cargando={isSubmitting}>
+        <Boton type="submit" cargando={isSubmitting} className={estilos.botonPrincipal}>
           Crear cuenta
         </Boton>
         <Link className={estilos.enlace} to={paths.login}>

@@ -1,0 +1,212 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-surface-muted);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 16rem;
+  flex-shrink: 0;
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3) var(--space-4);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-500);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.marcaPunto {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-500);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.link:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+}
+
+.linkActivo {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+}
+
+.icono {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.pie {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.barraSuperior {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.menuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+}
+
+.espaciador {
+  flex: 1;
+}
+
+.usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.125rem;
+  min-width: 0;
+  text-align: right;
+}
+
+.correo {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  max-width: 16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rol {
+  font-size: var(--font-size-xs);
+  padding: 0.05rem var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+  text-transform: capitalize;
+}
+
+.salir {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.salir:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.contenido {
+  flex: 1;
+  padding: var(--space-6);
+}
+
+.cargando {
+  display: grid;
+  place-items: center;
+  padding: var(--space-10);
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: var(--z-index-modal);
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebarAbierta {
+    transform: translateX(0);
+  }
+
+  .menuToggle {
+    display: inline-flex;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-index-overlay);
+    background-color: rgba(16, 17, 23, 0.4);
+  }
+
+  .correo {
+    max-width: 8rem;
+  }
+
+  .contenido {
+    padding: var(--space-4);
+  }
+}
